@@ -6,13 +6,13 @@
 # Variable declaration                                                                                                       #
 ##############################################################################################################################
 
-DEVICE_NAME="/dev/sda"									# Install ArchLinux on this device
+DEVICE_NAME="/dev/sda"							# Install ArchLinux on this device
 DEVICE_NAME_SHORT=${DEVICE_NAME##*/}					# get 'sdaX'
-HOSTNAME_ARCH="ordinateur"								# Computer name
-USERNAME="utilisateur"									# Sudoer username
-KEYBOARD_LAYOUT="fr"									# Keyboard Layout
+HOSTNAME_ARCH="ordinateur"						# Computer name
+USERNAME="utilisateur"							# Sudoer username
+KEYBOARD_LAYOUT="fr"							# Keyboard Layout
 
-LVM_NAME="ArchLVM"										# Logical Volume Manager (LVM) label
+LVM_NAME="ArchLVM"							# Logical Volume Manager (LVM) label
 ARG_GRUB="cryptdevice=\/dev\/sda3:${LVM_NAME}"			# Grub argument for grub.cfg
 SCRIPT_PATH="$(dirname "$(readlink -f "$0")")/$0"		# Script path
 
